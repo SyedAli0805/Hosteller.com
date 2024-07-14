@@ -1,0 +1,15 @@
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-label {
+    font-weight: bold;
+}
+.form-control {
+    max-width: 300px;
+}
+.btn-block {
+    width: 100%;
+    max-width: 300px;
+}
