@@ -1,0 +1,313 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* General styling */
+/* Body background */
+body {
+  background: linear-gradient(to right, #c8c7c7, #f9e8e8);
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+}
+
+/* Custom button styles */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+  border-color: #117a8b;
+}
+
+.btn {
+  border-radius: 30px;
+}
+
+
+.footer-icons a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure proper padding and margin for items in navbar */
+.navbar {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+}
+
+.navbar-brand img {
+  margin-right: 15px; /* Adjust logo spacing */
+}
+
+.nav-link {
+  color: #343a40 !important; /* Dark color for the text */
+  margin-right: 15px; /* Space between links */
+}
+
+.nav-link:hover {
+  color: #0056b3 !important; /* Darker primary color on hover */
+}
+
+.navbar .btn {
+  margin: 0 10px; /* Spacing around buttons */
+}
+
+/* Adjust form input and button spacing */
+.form-control {
+  max-width: 250px;
+}
+
+.btn-outline-success {
+  margin-left: 5px;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .form-control {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .btn-outline-success {
+    width: 100%;
+  }
+
+  .navbar .btn {
+    margin: 10px 0; /* Adjust button margin for smaller screens */
+  }
+}
+
+/* CSS for the card */
+.card {
+  transition: transform 0.3s ease;
+  width: 100%; /* Full width for responsive layout */
+  height: 100%;
+  border: none; /* Remove border for a clean look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Hover effect for the card */
+.card:hover {
+  transform: scale(1.05); /* Scale the card by 5% */
+}
+
+/* CSS for the button */
+.btn {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+  border-color: #117a8b;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+/* Specific styling for card content */
+.card-body {
+  text-align: center; /* Center align text */
+}
+
+.card-title {
+  font-size: 1.5rem; /* Increase title size */
+  font-weight: 600; /* Make title bold */
+  color: #007bff; /* Primary color for title */
+}
+
+.card-subtitle {
+  font-size: 1.25rem; /* Increase subtitle size */
+  font-weight: 500; /* Semi-bold for subtitle */
+  color: #28a745; /* Success color for price */
+  margin-bottom: 1rem; /* Space below subtitle */
+}
+
+.card-text {
+  font-size: 1rem; /* Default font size */
+  color: #6c757d; /* Secondary color for text */
+}
+
+.card-footer {
+  background-color: white; /* White background for footer */
+  border-top: none; /* Remove top border */
+  padding: 0.75rem; /* Add padding */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Adjustments for "View All" button */
+.view-all-btn {
+  font-size: 1.2rem; /* Larger font size */
+  padding: 0.75rem 1.5rem; /* Add padding */
+  color: white;
+  background-color: #007bff; /* Primary color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.view-all-btn:hover {
+  background-color: #0056b3; /* Darker primary color on hover */
+}
+
+/* Hostel carousel */
+.hostel-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.hostel-card {
+  flex: 0 0 auto;
+  width: 300px;
+  margin-right: 1rem;
+}
+
+.hostel-card:last-child {
+  margin-right: 0;
+}
+
+.card {
+  height: 100%;
+}
+
+/* Additional styling for carousel and other sections */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+#cta {
+  background-color: #c9c9c9;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#cta h2 {
+  margin-bottom: 1rem;
+}
+
+#testimonials, #benefits, #destinations {
+  padding: 2rem 0;
+}
+
+#benefits .fa {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+#contact .form-control-lg {
+  max-width: 100%;
+  margin: auto;
+  font-size: 1rem;
+}
+
+#contact button {
+  width: 150px;
+  margin: auto;
+}
+
+#signup {
+  background-color: #c9c9c9;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#signup h2 {
+  margin-bottom: 1rem;
+}
+
+/* Footer styling */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #c9c9c9;
+}
+
+footer .text-uppercase {
+  font-weight: bold;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .container {
+  max-width: 1200px;
+}
+
+footer .row {
+  justify-content: center;
+}
+
+footer .col-lg-6 {
+  text-align: center;
+}
+
+footer .p-3 {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #343a40;
+}
