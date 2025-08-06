@@ -9,45 +9,72 @@
   <link rel="stylesheet" href="{{ asset('css/index.css') }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 </head>
 
 <body>
   @include('includes.header')
-  <!-- Carousel -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{{asset('img/carousel-img1.png')}}" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="{{asset('img/carousel-img2.png')}}" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="{{asset('img/carousel-img3.png')}}" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+  <!-- Hero Section with Blob Background -->
+<section class="position-relative text-white text-center d-flex align-items-center justify-content-center"
+         style="min-height: 80vh; overflow: hidden; background-color: #ffffff;">
+  
+  <!-- Left-side Blob Background Behind Icons -->
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+       class="position-absolute" style="top: 50%; left: 0; transform: translate(-30%, -50%); width: 400px; height: 900px; z-index: 1;">
+    <path fill="#430b05bb"
+          d="M38.5,-62.3C48.5,-53.5,54.2,-40.4,62.8,-27.1C71.4,-13.7,82.9,-0.1,79.9,10.5C76.8,21.1,59.3,28.6,48.1,41.8C36.9,55,32,73.8,20.4,83.7C8.8,93.5,-9.6,94.4,-20.9,84.9C-32.3,75.4,-36.6,55.4,-41.6,40.9C-46.6,26.4,-52.3,17.4,-56.6,6.4C-60.9,-4.6,-63.7,-17.5,-61.8,-31C-60,-44.6,-53.5,-58.8,-42.4,-67.1C-31.3,-75.4,-15.7,-77.7,-0.7,-76.6C14.3,-75.5,28.5,-71,38.5,-62.3Z"
+          transform="translate(100 100)" />
+  </svg>
+
+  <!-- Existing Blob Background (Center) -->
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+       class="position-absolute w-100 h-100" style="top: 0; left: 0; z-index: 0;">
+    <path fill="#430b05"
+          d="M41.9,-75.3C53.8,-65.7,62.4,-53.4,64.7,-40.4C67,-27.4,62.8,-13.7,61.5,-0.7C60.3,12.2,61.8,24.4,58,34.7C54.1,44.9,44.9,53.3,34.3,57.6C23.7,61.8,11.9,62,0.5,61.1C-10.8,60.1,-21.5,58,-31.9,53.7C-42.3,49.3,-52.2,42.6,-61.6,33.2C-71,23.9,-79.9,12,-80.1,-0.1C-80.3,-12.2,-72,-24.5,-65.4,-38.6C-58.8,-52.8,-53.9,-68.9,-43.3,-79.2C-32.7,-89.4,-16.4,-93.8,-0.7,-92.6C15,-91.5,30.1,-84.8,41.9,-75.3Z"
+          transform="translate(250 100)" />
+  </svg>
+
+  <!-- Social Icons -->
+  <div class="position-absolute start-0 top-50 translate-middle-y d-flex flex-column align-items-center gap-3 ps-3" style="z-index: 2;">
+    <a href="#" class="text-white icon-animated"><i class="fab fa-facebook fa-lg"></i></a>
+    <a href="#" class="text-white icon-animated"><i class="fab fa-instagram fa-lg"></i></a>
+    <a href="#" class="text-white icon-animated"><i class="fab fa-twitter fa-lg"></i></a>
+    <a href="#" class="text-white icon-animated"><i class="fab fa-linkedin fa-lg"></i></a>
   </div>
 
+  <!-- Hero Content -->
+  <div class="container position-relative" style="z-index: 3;">
+    <div class="row flex-column-reverse flex-md-row align-items-center text-dark text-md-start">
+      
+      <!-- Text -->
+<div class="col-md-6 text-center text-md-start mt-4 mt-md-0 hero-text-animate">
+  <h1 class="fw-bold display-4">Find Your Perfect Hostel</h1>
+  <p class="lead">Explore affordable and comfortable hostels at your favorite destinations. Easy search, instant booking, and secure listings.</p>
+  <a href="#cards" class="btn btn-explore mt-3">Explore Now</a>
+
+</div>
+
+
+      <!-- Lottie Animation -->
+      <div class="col-md-6 d-flex justify-content-end">
+        <lottie-player 
+          src="{{ asset('lotties/searching.json') }}"
+          background="transparent"
+          speed="0.8"
+          style="width: 100%; max-width: 400px; height: auto;"
+          loop
+          autoplay>
+        </lottie-player>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
   <!-- Cards Section -->
-  <section id="cards" class="container my-5">
+  <!-- <section id="cards" class="container my-5">
     <div class="row row-cols-1 row-cols-md-3 g-4">
       @foreach ($hostels as $hostel)
       <div class="col">
@@ -76,10 +103,10 @@
         <button type="submit" class="btn btn-secondary">View All <i class="fas fa-arrow-right"></i></button>
       </a>
     </div>
-  </section>
+  </section> -->
 
   <!-- Call to Action -->
-  <section id="cta" class="container my-5">
+  <!-- <section id="cta" class="container my-5">
     <div class="row">
       <div class="col text-center">
         <h2>Ready to book your stay?</h2>
@@ -87,10 +114,10 @@
         <a href="{{url('search')}}" class="btn btn-secondary">Book Now</a>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="container my-5">
+  <!-- <section id="testimonials" class="container my-5">
     <div class="row">
       <div class="col text-center">
         <h2>What our customers say</h2>
@@ -110,10 +137,10 @@
       </div>
       @endforeach
     </div>
-  </section>
+  </section> -->
 
   <!-- Benefits Section -->
-  <section id="benefits" class="container my-5">
+  <!-- <section id="benefits" class="container my-5">
     <div class="row">
       <div class="col text-center">
         <h2>Why Choose Us?</h2>
@@ -138,8 +165,8 @@
     </div>
   </section>
 
-  <!-- Featured Destinations Section -->
-  <section id="destinations" class="container my-5">
+  Featured Destinations Section -->
+  <!-- <section id="destinations" class="container my-5">
     <div class="row">
       <div class="col text-center">
         <h2>Featured Destinations</h2>
@@ -160,14 +187,13 @@
         <h4 class="text-center">Karachi</h4>
       </div>
     </div>
-  </section>
-
+  </section>  -->
   <!-- Contact Section -->
-  <section id="contact" class="container my-5">
+  <!-- <section id="contact" class="container my-5">
     <div class="row justify-content-center">
-      <div class="col-12 col-md-10 col-lg-8">
+      <div class="col-12 col-md-10 col-lg-8"> -->
         <!-- Adjusted column sizes for better responsive behavior -->
-        <h2 class="text-center">Contact Us</h2>
+        <!-- <h2 class="text-center">Contact Us</h2>
         <p class="text-center">Have a question or feedback? Drop us a message below.</p>
         <form action="{{url('/contact')}}" method="POST">
           @csrf
@@ -192,10 +218,10 @@
         </form>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Sign Up Section -->
-  <section id="signup" class="container my-5">
+  <!-- <section id="signup" class="container my-5">
     <div class="row">
       <div class="col text-center">
         <h2>Join Us Today!</h2>
@@ -210,10 +236,10 @@
         </form>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Footer -->
-  <footer class="text-center text-lg-start mt-5">
+  <!-- <footer class="text-center text-lg-start mt-5">
     <div id="about" class="container p-4">
       <div class="row">
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
@@ -240,9 +266,11 @@
     <div class="text-center p-3">
       &copy; 2024 Hosteller
     </div>
-  </footer>
+  </footer> -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+  
 </body>
 
 </html>
